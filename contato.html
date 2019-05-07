@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Coffe Break : projeto">
+	<meta name="keywords" content="Café, Coffe, break, pausa">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/favicon.png" type="image">
+	<title>Coffe Break</title>
+</head>
+
+<body>
+	<header class="cabecalho">
+		<nav class="menu">
+			<a href="index.html"><img src="img/logo.png" alt="CoffeBreak" width="120px" height="120px"></a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="contato.html">Contato</a></li>
+				<li><a href="produtos.html">Produtos</a></li>
+				<li><a href="lojas.html">lojas</a></li>
+			</ul>
+		</nav>
+
+	</header>
+	<section id="contato">
+		<h1>Entre em contato conosco</h1>
+		<p>Fone: 4002-8922</p>
+		<form action="/contato/" method="post">
+			<h2>Envie-nos um email:</h3>
+
+				<label for="nome">Nome:<label>
+						<input type="text" id="nome" placeholder="Exemplo" required="required">
+
+	
+				<label for="email">Email:<label>
+						<input type="email" id="email" placeholder="exemplo@email.com" required="required">
+
+			<div id="message">
+				<label for="msg">Mensagem:<label>
+						<textarea name="msg" placeholder="Deixe sua mensagem"></textarea>
+			</div>
+			<div id="button">
+				<input type="button" value="Enviar">
+			</div>
+		</form>
+	</section>
+	<footer class="copy">
+		<p>Projeto da disciplina de Desenvolvimento em Ambiente Web, ministrada pelo Prof. Rafael Roque. Projeto desenvolvido pelos estudantes: Gabriel Vieira e Lucas Campelo.</p><img src="img/ipesu.png" alt="Ipesu">
+</footer>
+</body>
+</html>

@@ -1,0 +1,509 @@
+/*-------------------------------------INDEX.HTML-------------------------------------*/
+@font-face {
+    font-family: Anton-Regular;
+    src: url('fonts/Anton-Regular.ttf');
+}
+@font-face {
+    font-family: Keep the Faith - TTF;
+    src: url('fonts/Keep the Faith - TTF.ttf');
+}
+@font-face {
+    font-family: Caffe Lungo DEMO;
+    src: url('fonts/Caffe Lungo DEMO.otf');
+}
+body {
+    font-family:Caffe Lungo DEMO, Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0% auto;
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1, h2{
+    font-family: Caffe Lungo DEMO, Helvetica, Arial, sans-serif;
+}
+.cabecalho {
+    display: flex;
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 100%;
+}
+.menu{ 
+    display: flex;
+}
+.menu ul {
+    list-style: none;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.menu ul li {
+    text-align: center;
+    width: 100%;
+    font-size: 100%;
+    padding: 2%;
+}
+.menu a{
+    color: white;
+    text-shadow: black;
+    text-decoration: none;
+    font-family: Anton-Regular;
+    text-transform: uppercase;
+    } 
+#destaques {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top:2px solid  silver;
+    border-bottom:2px solid grey;
+    width: auto;
+}
+#destaques h1{
+    text-shadow: 1px 1px grey;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+}
+#sobre {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+#sobre h2 {
+    font-family:Caffe Lungo DEMO, Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+#sobre p{
+    font-family: Keep the Faith - TTF Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+#marcas {
+    display: flex;
+}
+#marcas h2{
+    border-top: 2px solid grey;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+}
+
+/*---------------------------SLIDES---------------------------*/
+
+
+.slider {
+    display: flex;
+    margin: auto auto;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.foto{
+    position: absolute;
+    opacity: 0;
+    animation: slide 17s infinite;
+    width: 100%;
+    height: 100%;
+}
+@keyframes slide{
+        25%{
+            opacity: 1;
+            transform:scale(1.0,1.0);
+        }
+        50%{
+            opacity: 0;
+
+        }
+}
+.foto:nth-child(1){
+    animation-delay: 0s;
+}
+.foto:nth-child(2){
+    animation-delay: 2.5s;
+}
+.foto:nth-child(3){
+    animation-delay: 5s;
+}
+.foto:nth-child(4){
+    animation-delay: 7.5s;
+}
+.foto:nth-child(5){
+    animation-delay: 10s;
+}
+.foto:nth-child(6){
+    animation-delay: 13s;
+}
+/*---------------------------SLIDES---------------------------*/
+
+.copy{
+    display: flex;
+    flex-direction: column;
+    background-color: #2d2d2d;
+    align-items: center;
+}  
+.copy p{
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow:2px 2px black;
+    font-family: Anton-Regular;
+}
+.copy img{
+    width: 200px;
+}
+/*---------------------------Telas maiores que tablets---------------------------*/
+@media screen and (min-width: 768px){
+    .cabecalho {
+        width: 100%;
+        height: 100px;
+    }
+    .menu{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+    .menu ul{
+        flex-direction: row;
+        width: 30%;
+        padding-left: 300px;
+        padding-top: 50px;
+    }
+    #sobre{
+        padding-top: 20px;
+        padding-bottom: 20px;   
+    }
+    #sobre h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+    #sobre p{
+        font-size: 25px;
+        display: inline-block;
+        text-align: center; 
+    }
+    #marcas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   #marcas h2{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 25px;
+    padding-bottom: 0;
+   }
+   #imgs {
+       width: 100%;
+       display: inline-block;
+       text-align: center;
+   }
+   #imgs img {
+       padding: 10px;
+   }
+   .copy{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #2d2d2d;
+    align-items: center;
+}  
+.copy p{
+    padding: 0%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow:2px 2px black;
+    font-family: Anton-Regular;
+}
+.copy img{
+    width: 200px;
+}
+}
+    
+/*--------------------------------------------------------------------*/
+/*-------------------------------------CONTATO.HTML-------------------------------------*/
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contato h1{
+    font-size: 30px;
+    text-align: center;
+}
+#contato p{
+    font-size: 22px;
+    padding-left: 2px;
+}
+form{
+    font-family: Caffe Lungo DEMO, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+form h2{
+    font-size: 27px;
+    text-align: center;
+}
+label{
+    width: 100%;
+    margin-left: 10px;
+}
+input{
+    width: 95%;
+    padding: 10px 20px;
+    margin: 8px 0px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 7px;
+}
+#message textarea{
+    width: 95%;
+    padding: 10px 20px;
+    margin: 8px 0px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 7px;
+}
+#button input{
+    background-color: #2d2d2d ;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    width: 95%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#button input:hover {
+    background-color: silver;
+    color: black;
+}
+/*---------------------------Telas maiores que tablets---------------------------*/
+@media screen and (min-width: 768px){
+    #contato{
+            display: flex;
+            align-items: center;
+    }  
+    #contato p{
+        font-size: 22px;
+        float: left;
+    }
+    #contato h1{
+        text-align: center;
+    }
+    #contato h2{
+        font-size: 26px;
+    }
+    input{
+        width: 99%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #message textarea{
+        width: 99%;
+    }
+    #button {
+     text-align: center;
+     align-content: center;
+     float: right;
+     width: 25%;
+    } 
+    #button input {
+        padding: 15px 35px;
+        font-size: 16px; 
+    }
+}
+/*-------------------------------------LOJAS.HTML-------------------------------------*/
+#lojas{
+    text-align: center;
+    margin: 0%;
+}
+#loja12{
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin: 0%;
+}
+#lojas h1{
+    text-align: center;
+    font-size: 30px;
+}
+#loja12 ul{
+    width: 100%;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+#loja12 a{
+    text-decoration: none;
+    color: black;
+}
+#loja23{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+#loja23 ul{   
+    list-style: none;
+   padding: 0%;
+    margin: 0%;
+}
+#loja23 a{
+    text-decoration: none;
+    color: black;
+}
+/*---------------------------Telas maiores que tablets---------------------------*/
+@media screen and (min-width: 768px){
+  
+    #loja12 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+    #loja12 ul{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        list-style: none;
+        text-decoration: none;
+    }
+    #loja12 li{
+        margin-left: 12%;
+        text-align: center;
+    }
+    #loja23{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-bottom: 35px;
+    }
+    #loja23 ul{
+        
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        list-style: none;
+        text-decoration: none;
+    }
+    #loja23 li{
+        margin-left: 9%;
+        text-align: center;
+    }
+}
+/*---------------------------Telas para PC's---------------------------*/
+@media screen and (min-width: 1280px){
+  
+    #loja12 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+    #loja12 ul{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        list-style: none;
+        text-decoration: none;
+    }
+    #loja12 li{
+        margin-left: 17%;
+        text-align: center;
+    }
+    #loja23{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-bottom: 35px;
+    }
+    #loja23 ul{
+        
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        list-style: none;
+        text-decoration: none;
+    }
+    #loja23 li{
+        margin-left: 15%;
+        text-align: center;
+    }
+}
+/*-------------------------------------PRODUTOS.HTML-------------------------------------*/
+#produtos{ 
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+}
+#produtos h1{
+    text-align: center;
+    font-size: 30px;
+}
+#pdt ul {
+    list-style: none;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#pdt li{
+    margin-bottom: 30px;
+}
+#pdt li p {
+    margin-bottom: 20px;
+    float: right;
+    padding-right: 20%;
+    font-size: 20px;
+    width: 30%;
+}
+/*---------------------------Telas maiores que tablets---------------------------*/
+@media screen and (min-width: 768px){
+    #pdt {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #produtos h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    #pdt ul {
+        display: inline-block;
+    }
+    #pdt li{
+        display: inline-block;
+        margin: 30px;
+        width: 20%;
+
+    }
+    #pdt li p {
+        width: 24%;
+        text-align: justify;
+        float: right;
+    }
+       
+}
