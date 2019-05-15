@@ -478,6 +478,7 @@ textarea{
     font-size: 20px;
     width: 30%;
 }
+
 /*---------------------------Telas maiores que tablets---------------------------*/
 @media screen and (min-width: 768px){
     #pdt {
@@ -506,3 +507,9 @@ textarea{
     }
        
 }
+.my-custom-scrollbar {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+}
+   
