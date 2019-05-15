@@ -18,42 +18,42 @@ function atualizarCarrinho(){
 var btnsCarrinho = document.getElementsByClassName('botao')
 for (var i = 0; i < btnsCarrinho.length; i++) {
     var button = btnsCarrinho[i]
-    button.addEventListener('click', addToCartClicked)
+    button.addEventListener('click', addCarClicado)
 }
 
-function addToCartClicked(event) {
+function addCarClicado(event) {
     var button = event.target
-    var shopItem = button.parentElement.parentElement
-    var title = shopItem.getElementsByClassName('card-title')[0].innerText
-    var price = shopItem.getElementsByClassName('preco')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('card-img-top')[0].src
+    var prodt = button.parentElement.parentElement
+    var title = prodt.getElementsByClassName('card-title')[0].innerText
+    var price = prodt.getElementsByClassName('preco')[0].innerText
+    var imageSrc = prodt.getElementsByClassName('card-img-top')[0].src
     btnProduto(price)
-    addItemToCart(title,price,imageSrc)
-    updateCartTotal()
+    addCar(title,price,imageSrc)
+    attCarTotal()
 }
-function addItemToCart(title, price, imageSrc) {
+function addCar(title, price, imageSrc) {
     var cartRow = document.createElement('tr')
     cartRow.classList.add('tableItens')
-    var cartItems = document.getElementsByClassName('tablebody')[0]
+    var carPdt = document.getElementsByClassName('tablebody')[0]
 
-    var cartItemNames = cartItems.getElementsByClassName('titulo-car')
-    for (var i = 0; i < cartItemNames.length; i++) {
-        if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
+    var carPdtNome = carPdt.getElementsByClassName('titulo-car')
+    for (var i = 0; i < carPdtNome.length; i++) {
+        if (carPdtNome[i].innerText == title) {
+            alert('Este produto já está no carrinho')
             return
         }
     }
 
-var cartRowContents = `
+var cartRowctd = `
                             <th scope="row"></th>
                             <td> <img src="${imageSrc}"width="99" height="99"> <span class="titulo-car">${title}</span></td>
                             <td class="itemPreco">${price}</td>
                             <td><input class="cart-quantidade-input" type="number" value="1">
-                            <button class="btn btn-retirar" type="button">Retirar</button></td>
+                            <button class="btn btn-danger btn-retirar" type="button">Retirar</button></td>
                         `
 
-        cartRow.innerHTML = cartRowContents
-        cartItems.append(cartRow)
+        cartRow.innerHTML = cartRowctd
+        carPdt.append(cartRow)
 
         cartRow.getElementsByClassName('btn-retirar')[0].addEventListener('click', retirarCartItem)
         cartRow.getElementsByClassName('cart-quantidade-input')[0].addEventListener('change', quantidadeMudou)
@@ -61,38 +61,38 @@ var cartRowContents = `
 function retirarCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
-    updateCartTotal()
+    attCarTotal()
 }
 function quantidadeMudou(event) {
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
     }
-    updateCartTotal()
+    attCarTotal()
 }
 
-function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('tablebody')[0]
-    var cartRows = cartItemContainer.getElementsByClassName('tableItens')
+function attCarTotal() {
+    var carpdtContainer = document.getElementsByClassName('tablebody')[0]
+    var cartRows = carpdtContainer.getElementsByClassName('tableItens')
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByClassName('itemPreco')[0]
+        var elementoPreco = cartRow.getElementsByClassName('itemPreco')[0]
         console.log()
-        var quantityElement = cartRow.getElementsByClassName('cart-quantidade-input')[0]
-        var price = parseFloat(priceElement.innerText.replace('R$', ''))
-        var quantity = quantityElement.value
-        total = total + (price * quantity)
+        var elementoQtd = cartRow.getElementsByClassName('cart-quantidade-input')[0]
+        var price = parseFloat(elementoPreco.innerText.replace('R$', ''))
+        var quantidade = elementoQtd.value
+        total = total + (price * quantidade)
     }
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('precoTotal')[0].innerText = '$' + total
 }
 document.getElementsByClassName('compra')[0].addEventListener('click', compraClicked)
 function compraClicked() {
     alert('Obrigado pela preferencia :)')
-    var cartItems = document.getElementsByClassName('tablebody')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
+    var carPdt = document.getElementsByClassName('tablebody')[0]
+    while (carPdt.hasChildNodes()) {
+        carPdt.removeChild(carPdt.firstChild)
     }
-    updateCartTotal()
+    attCarTotal()
 }

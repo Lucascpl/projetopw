@@ -9,9 +9,6 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="img/favicon.png" type="image">
-
-	
-
 	<link rel= "stylesheet" href= "css/bootstrap.min.css" > 
 
 	<title>Coffe Break</title>
@@ -26,15 +23,12 @@
 				<li><a href="contato.html">Contato</a></li>
 				<li><a href="produtos.html">Produtos</a></li>
 				<li><a href="lojas.html">lojas</a></li>
-				<li><a><button class=" btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-					<img src="img/shopping-cart.svg" width="30px" alt="Logo"></a></li>
-			</ul>
-			
+			</ul>	
 		</nav>
-	
-			</button>
+	</header>	
 
-	</header>
+	<button class=" btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			<img src="img/shopping-cart.svg" width="50px" alt="Logo"> </button>
 	<section id="produtos">
 		
 				<div class= "fixed-bottom collapse"  id="collapseExample">
@@ -46,16 +40,17 @@
 											<th scope="col">Produto</th>
 											<th scope="col">Preço</th>
 											<th scope="col">Quantidade</th>
-										</tr>
+											<th scope="col">
+                <strong class="cart-total-title">Total</strong>
+                <span class="precoTotal">R$0</span>
+						</div></th>
+					</tr>
 									</thead>
 									<tbody class=" tablebody">
-								<!-- asjdgbasldbalskdbasçdkb -->
+								<!-- parte onde os produtos entram-->
 									</tbody>
 								</table>
-							<div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">R$0</span>
-						</div>
+							<
 						<button class="btn btn-dark compra" >Comprar</button>
 				  </div>
 				</div>
@@ -63,7 +58,7 @@
 		<h1>Conheça nossos produtos</h1>
 		<nav id="pdt">
 				<div class="card-deck">
-				<div class="card">
+				<div class="card" >
 				  <img src="img/produto4.png" class="card-img-top" alt="produto1">
 				  <div class="card-body">
 					<h5 class="card-title">Orfeu</h5>
