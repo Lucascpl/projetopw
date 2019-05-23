@@ -1,5 +1,7 @@
 /*-------------------------------------INDEX.HTML-------------------------------------*/
-@font-face {
+/* OBS: Não irei comentar comandos repetidos, por motivos obvios :) */
+
+@font-face { /* Adicionando novas fontes personalidas. */
     font-family: Anton-Regular;
     src: url('fonts/Anton-Regular.ttf');
 }
@@ -7,25 +9,26 @@
     font-family: Keep the Faith - TTF;
     src: url('fonts/Keep the Faith - TTF.ttf');
 }
-@font-face {
+@font-face { 
     font-family: Caffe Lungo DEMO;
     src: url('fonts/Caffe Lungo DEMO.otf');
 }
-body {
-    font-family:Caffe Lungo DEMO, Helvetica, Arial, sans-serif;
-    width: 100%;
-    height: 100%;
-    margin: 0% auto;
-    background-image: url("img/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Modificando o body. ---- OBS: As modificações aqui feitas irão apenas refletir nos conteúdos que não especificam determinadas definições como o "width" por exemplo. */
+ body { 
+    font-family:Caffe Lungo DEMO, Helvetica, Arial, sans-serif; /* Adicionando uma das fontes personalizadas */
+    width: 100%; /* Definindo largura do body*/
+    height: 100%; /* Definindo altura do body*/
+    margin: 0%; /* Definindo margin 0 */
+    background-image: url("img/background.jpg"); /* Colocando um plano de fundo para o site */
+    background-repeat: no-repeat; /* Dizendo para não haver repetição do background, caso ele seja pequeno em alguma dimensão */
+    background-size: cover; /* Dizendo para o background cobrir todo o body. */
 }
 h1, h2{
-    font-family: Caffe Lungo DEMO, Helvetica, Arial, sans-serif;
+    font-family: Caffe Lungo DEMO, Helvetica, Arial, sans-serif; /* Definindo as fontes padrões do h1, h2 */
 }
-.cabecalho {
-    display: flex;
-    background-color: #2d2d2d;
+.cabecalho { 
+    display: flex; /* Definindo para apresentar o menu num flexbox, (que organiza dinâmicamente os elementos filhos)*/
+    background-color: #2d2d2d; /* Definindo a cor do plano de fundo do menu. */
     width: 100%;
     height: 100%;
 }
@@ -33,39 +36,39 @@ h1, h2{
     display: flex;
 }
 .menu ul {
-    list-style: none;
-    padding: 0%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    list-style: none; /* Dizendo que não quero nenhum estilo na minha lista */
+    padding: 0%; /* Tirando o padding, que é como se fosse o afastamento de um item dentro do seu container */
+    display: flex; 
+    flex-direction: row; /* Definindo a direção do flexbox em linha */
+    align-items: center; /* Alinhando os itens ao centro */
     width: 100%;
 }
 .menu ul li {
-    text-align: center;
+    text-align: center; /* Alinhando o texto dos itens no centro */
     width: 100%;
-    font-size: 100%;
+    font-size: 100%; /* Definindo o tamanho da fonte */
     padding: 2%;
 }
 .menu a{
-    color: white;
-    text-shadow: black;
-    text-decoration: none;
+    color: white; /* Definindo a cor das letras do "a" */
+    text-shadow: black; /* Definindo a sombra */
+    text-decoration: none; /* Tirando toda decoração do texto*/
     font-family: Anton-Regular;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Deixando o texto em LETRAS MAIÚSCULAS */
     } 
 #destaques {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    border-top:2px solid  silver;
-    border-bottom:2px solid grey;
+    flex-direction: column; /* Dizendo para mostrar os itens em colúna */
+    border-top:2px solid  silver; /* Definindo uma borda para o top, que seja sólida com tamanho de 2px e cor prata */
+    border-bottom:2px solid grey; /* Mesma coisa da anterior, porém para o bot e de cor cinza*/
     width: auto;
 }
 #destaques h1{
     text-shadow: 1px 1px grey;
     text-align: center;
     font-size: 30px;
-    padding-top: 30px;
+    padding-top: 30px;  
 }
 #sobre {
     padding-top: 20px;
@@ -97,20 +100,20 @@ h1, h2{
     flex-direction: column;
     align-items: center;
     padding: 0%;
-    margin: 0%;
+    margin: 0%; /* Definindo o espaçamento entre containeres para "0" */
 }
 
 /*---------------------------SLIDES---------------------------*/
 
 
-.slider {
+.slider {  
     display: flex;
     margin: auto auto;
     width: 350px;
     height: 400px;
-    position: relative;
-    overflow: hidden;
-}
+    position: relative; /* Dizendo para classe slider ser relativos em sua posição. */
+    overflow: hidden; /*  Dizendo para o conteúdo ser cortado sem exibir nenhuma barra de rolagem. */
+}  
 .foto{
     position: absolute;
     opacity: 0;
@@ -118,8 +121,8 @@ h1, h2{
     width: 100%;
     height: 100%;
 }
-@keyframes slide{
-        25%{
+@keyframes slide{ /* Criando a anmimação do slide (Preferi criar aqui pois ainda não havia estudado JS, e como também é funcional, preferi deixar a animação aqui.*/
+        25%{ /* Dizendo a duração da animação, e também a opacidade das iamgens e a escala da transformação (1 eu deixo a imagem no seu tamanho normal para o seu tamanho normal, caso colocasse em 0.5, 1 a imagem cresceria gradualmente. */
             opacity: 1;
             transform:scale(1.0,1.0);
         }
@@ -128,7 +131,7 @@ h1, h2{
 
         }
 }
-.foto:nth-child(1){
+.foto:nth-child(1){ /* Definindo o "delay" da animação das imagens */
     animation-delay: 0s;
 }
 .foto:nth-child(2){
@@ -166,14 +169,14 @@ h1, h2{
     width: 200px;
 }
 /*---------------------------Telas maiores que tablets---------------------------*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px){ /* Modificando algumas propriedades do CSS, para telas maiores. Quando criei o projeto aderi por fazer o método "mobile first" */
     .cabecalho {
         width: 100%;
         height: 100px;
     }
     .menu{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-around; /* Definindo como os itens vão se comportar dentro do seu container, nesse caso vão se distribuir igualmente por dentro do container. */
         width: 100%;
         padding: 0%;
         margin: 0%;
@@ -194,13 +197,13 @@ h1, h2{
     }
     #sobre p{
         font-size: 25px;
-        display: inline-block;
+        display: inline-block; /* Definindo o display para mostrar a parte "sobre" em linhas de blocos */
         text-align: center; 
     }
     #marcas {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Alinhando os itens no centro */
     }
    #marcas h2{
     width: 100%;
@@ -286,14 +289,10 @@ input{
 textarea{
    width: 90%;
    border: 2px solid gray;
-   border-radius: 5px;
+   border-radius: 5px; /* Deixando a borda um pouco mais redondinha =) */
    
    
 }
-
-/*---------------------------Telas maiores que tablets---------------------------*/
-@media screen and (min-width: 768px){
-    
 /*-------------------------------------LOJAS.HTML-------------------------------------*/
 #lojas{
     text-align: center;
@@ -467,7 +466,7 @@ textarea{
     #pdt li p {
         width: 24%;
         text-align: justify;
-        float: right;
+        float: right; /* Definindo os paragrafos de dentro das listas de dentro dos produtos para ficarem flutuando na direita. */
     }
        
 }

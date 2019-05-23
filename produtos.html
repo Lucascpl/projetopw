@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="img/favicon.png" type="image">
-	<link rel= "stylesheet" href= "css/bootstrap.min.css" > 
+	<link rel= "stylesheet" href= "css/bootstrap.min.css" > <!--Fazendo o link com o bootstrap, preferi ultilizar a versão compilada, do que linkar diretamente com o site, pois poderia modoficar algo do meu interesse.-->
 
 	<title>Coffe Break</title>
 </head>
@@ -28,9 +28,11 @@
 	</header>	
 
 	<button class=" btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+		<!--Definindo um "botão collapse". Esse botão vai aprir uma "janela" na tela ao ser clicado.
+		Componente vindo do Bootstrap.-->
 			<img src="img/shopping-cart.svg" width="40px" alt="Logo"> </button>
 	<section id="produtos">
-		
+										<!--Criando a interface do carrinho abaixo. Ultilizei de tables do Bootstrap dentro do Collapse,para que os produtos ficassem organizados e detalhadaos.-->
 				<div class= "fixed-bottom collapse"  id="collapseExample">
 				  <div style="padding:0" class="card cardcar my-custom-scrollbar card-body">
 							<table class="table">
@@ -42,12 +44,12 @@
 											<th scope="col">Quantidade</th>
 											<th scope="col">
                 <strong class="cart-total-title">Total</strong>
-                <span class="precoTotal">R$0</span>
+                <span class="precoTotal">R$0</span> <!--Ultilizaçã do span por ser como uma Div, só que em linha. Já que o valor do carrinho vai eventualmente mudar.-->
 						</div></th>
 					</tr>
 									</thead>
 									<tbody class=" tablebody">
-								<!-- parte onde os produtos entram-->
+								<!-- Parte onde os produtos entram-->
 									</tbody>
 								</table>
 							
@@ -56,6 +58,7 @@
 				</div>
 			
 		<h1>Conheça nossos produtos</h1>
+		<!--Definindo e mostrando os produtos-->
 		<nav id="pdt">
 				<div class="card-deck">
 				<div class="card cardpdt" >
@@ -188,7 +191,7 @@
 	<footer class="copy">
 		<p>Projeto da disciplina de Desenvolvimento em Ambiente Web, ministrada pelo Prof. Rafael Roque. Projeto desenvolvido pelos estudantes: Gabriel Vieira e Lucas Campelo.</p><img src="img/ipesu.png" alt="Ipesu">
 </footer>
-
+<!--Linkando os Scripts do site-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src= "js/bootstrap.min.js" ></script>
 <script src="js/carrinho.js"></script>

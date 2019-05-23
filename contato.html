@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+<head> 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Coffe Break : projeto">
@@ -28,35 +27,13 @@
 	<section id="contato">
 		<h1>Entre em contato conosco</h1>
 		<h2>Fone: 4002-8922</h2>
-
+<!--Aqui eu coloquei uma api do Google Docs, para servir de formulário. As mensagens enviadas pelos usuários vão diretamente para o minha conta.-->
 		<iframe id="googled" src="https://docs.google.com/forms/d/e/1FAIpQLSfmotGsfn-cf_sApRlm_bUBOiba2Qm_qegZSDUOSffPO-qUqA/viewform?embedded=true" width="640" height="822" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
 	</section>
 	<footer class="copy">
 		<p>Projeto da disciplina de Desenvolvimento em Ambiente Web, ministrada pelo Prof. Rafael Roque. Projeto
 			desenvolvido pelos estudantes: Gabriel Vieira e Lucas Campelo.</p><img src="img/ipesu.png" alt="Ipesu">
 	</footer>
-	<script type="text/javascript">
-
-		function validar_contato() {
-			var nome = cntt.nome.value;
-			var email = cntt.email.value;
-			var mensagem = cntt.msg.value;
-
-			if (nome == "") {
-				alert("Campo nome é obrigatorio");
-				cntt.nome.focus();
-				return false;
-			} if (email == "") {
-				alert("Campo email é obrigatorio");
-				cntt.email.focus();
-				return false;
-			} if (mensagem == "") {
-				alert("Campo mensagem é obrigatorio");
-				cntt.msg.focus();
-				return false;
-			}
-		}
-	</script>
 </body>
 
 </html>

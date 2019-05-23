@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<!-- A parte, meta, header e footer vão ter comentários apenas aqui no index, pois não vão vejo necessidade de dizer as mesmas coisas nas outras páginas, já que essas partes são iguais. Contudo, caso haja alguma diferença irei destacar lá.-->
 <html lang="pt-br">
-
+<!--Parte "escondida" do site, definindo método de linguagem, coisas para facilitar e deixar o site com mais "rate" na busca do google, linkando os estilos do css, e adicionando o favicon do site. -->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,12 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="img/favicon.png" type="image">
-	<link rel="stylesheet" href="css/">
 	<title>Coffe Break</title>
 </head>
 
 <body>
-	<header class="cabecalho">
+	<header class="cabecalho"> 
+		<!--Aqui definimos o header, e dentro dele o menu principal do site, uma lista desordenada e os intens dessa lista. Preferi deixar a imagem dentro do menu mas sem a tag <li> para não ficar exatamente juntos dos outros intens da lista. Também deixei um "a" na imagem para que quando alguem clique nela seja redirecionada a página principal. -->
 		<nav class="menu">
 			<a href="index.html"><img src="img/logo.png" alt="CoffeBreak" width="120px" height="120px"></a>
 			<ul>
@@ -25,7 +26,9 @@
 			</ul>
 	</header>
 	<main>
+		<!--Definindo o conteúdo principal do site-->
 		<section id="destaques">
+			<!--Aqui eu abro uma section, para definir os slides do site-->
 			<h1>Confira nossas ofertas</h1>
 			<section class="slider">
 				<img class="foto" src="img/slides/slider1.png">
@@ -37,10 +40,13 @@
 			</section>
 		</section>
 		<section id="sobre">
+			<!--Mais uma section, dessa vez apenas para contar um pouco mais sobre a "empresa"-->
 			<h2>Nossos produtos</h2>
 			<p>Para que você, possa degustar do melhor café possível nós trabalhamos apenas com as melhores marcas, que se preocupam com o método de produção do café, desde a qualidade dos grãos, sua cuidadosa seleção e processo de torrefação, garantem um produto de exelente qualidade, apreciado pelos mais exigentes consumidores.</p>
 		</section>
 		<section id="marcas">
+			<!--Mais uma section, para informar as marcas que "trabalhamos"-->
+			<!--Optei por usar as sections, em vez de Divs, por questões semânticas, já que a div é apenas um container vazio, e a Section define uma seção, existem outras tags como a "Article", mas achei a section mais apropriada.-->
 			<h2>Conheça as marcas com que trabalhamos</h2>
 			<div id="imgs">
 			<img src="img/bazilli.png" alt="bazilli" width="200px" height="120px">
@@ -51,7 +57,7 @@
 		</div>
 		</section>
 	</main>
-	<footer class="copy">
+	<footer class="copy"> <!--Definindo o footer, e informando que se trata de um projeto da faculdade.-->
 			<p>Projeto da disciplina de Desenvolvimento em Ambiente Web, ministrada pelo Prof. Rafael Roque. Projeto desenvolvido pelos estudantes: Gabriel Vieira e Lucas Campelo.</p><img src="img/ipesu.png" alt="Ipesu">
 	</footer>
 </body>
